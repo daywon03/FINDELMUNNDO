@@ -1,46 +1,50 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
   const navLinks = [
-    { path: '/', label: 'Accueil' },
-    { path: '/portfolio', label: 'Portfolio' },
-    { path: '/about', label: 'À Propos' },
-    { path: '/contact', label: 'Contact' },
+    { path: "/", label: "Accueil" },
+    { path: "/portfolio", label: "Portfolio" },
+    { path: "/about", label: "À Propos" },
+    { path: "/contact", label: "Contact" },
   ];
 
   const isActive = (path) => location.pathname === path;
 
   return (
     <>
-      {/* Desktop Navigation - Vertical Left Side */}
-      <nav 
-        className="hidden md:flex fixed left-0 top-0 h-full w-20 flex-col items-center justify-between py-12 z-50 bg-fdm-bg/80 backdrop-blur-md border-r border-fdm-border"
+      {/* Desktop Navigation - Horizontal Top */}
+      <nav
+        className="hidden md:flex fixed top-0 left-0 w-full h-20 items-center justify-between px-12 z-50 bg-black/80 backdrop-blur-md border-b border-fdm-border"
         data-testid="desktop-navigation"
       >
         {/* Logo */}
         <Link to="/" className="group" data-testid="nav-logo">
-          <div className="flex flex-col items-center">
-            <span className="font-display text-lg font-bold tracking-tighter">FDM</span>
+          <div className="flex items-center gap-1">
+            <span className="font-display text-2xl font-bold tracking-tighter">
+              FDM
+            </span>
             <span className="red-dot"></span>
           </div>
         </Link>
 
-        {/* Nav Links - Vertical */}
-        <div className="flex flex-col items-center gap-8">
+        {/* Nav Links - Horizontal */}
+        <div className="flex items-center gap-12">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`nav-link vertical-text text-xs uppercase tracking-widest transition-colors ${
-                isActive(link.path) ? 'text-fdm-accent' : 'text-fdm-text-secondary hover:text-fdm-text'
+              className={`nav-link font-display text-xs uppercase tracking-[0.3em] transition-colors ${
+                isActive(link.path)
+                  ? "text-fdm-accent"
+                  : "text-fdm-text-secondary hover:text-fdm-text"
               }`}
-              data-testid={`nav-link-${link.label.toLowerCase().replace(' ', '-')}`}
+              data-testid={`nav-link-${link.label.toLowerCase().replace(" ", "-")}`}
             >
               {link.label}
             </Link>
@@ -48,26 +52,29 @@ const Navigation = () => {
         </div>
 
         {/* Admin Link */}
-        <Link 
-          to="/admin/login" 
-          className="text-fdm-text-secondary hover:text-fdm-accent transition-colors text-xs uppercase tracking-widest"
+        <Link
+          to="/admin/login"
+          className="text-fdm-text-secondary hover:text-fdm-accent transition-colors font-display text-xs uppercase tracking-[0.3em]"
           data-testid="nav-admin-link"
         >
-          <span className="vertical-text">Admin</span>
+          <span>Admin</span>
         </Link>
       </nav>
 
       {/* Mobile Navigation */}
-      <nav 
-        className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-fdm-bg/95 backdrop-blur-md border-t border-fdm-border"
+      <nav
+        className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-t border-fdm-border"
         data-testid="mobile-navigation"
       >
         <div className="flex items-center justify-between px-6 py-4">
-          <Link to="/" className="font-display text-lg font-bold tracking-tighter">
+          <Link
+            to="/"
+            className="font-display text-lg font-bold tracking-tighter"
+          >
             FDM<span className="red-dot"></span>
           </Link>
-          
-          <button 
+
+          <button
             onClick={() => setIsOpen(!isOpen)}
             className="p-2"
             data-testid="mobile-menu-toggle"
@@ -83,7 +90,7 @@ const Navigation = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
-              className="absolute bottom-full left-0 right-0 bg-fdm-bg border-t border-fdm-border"
+              className="absolute bottom-full left-0 right-0 bg-black border-t border-fdm-border"
             >
               <div className="flex flex-col p-6 gap-4">
                 {navLinks.map((link) => (
@@ -91,10 +98,10 @@ const Navigation = () => {
                     key={link.path}
                     to={link.path}
                     onClick={() => setIsOpen(false)}
-                    className={`text-lg uppercase tracking-widest ${
-                      isActive(link.path) ? 'text-fdm-accent' : 'text-fdm-text'
+                    className={`font-display text-sm uppercase tracking-[0.3em] ${
+                      isActive(link.path) ? "text-fdm-accent" : "text-fdm-text"
                     }`}
-                    data-testid={`mobile-nav-link-${link.label.toLowerCase().replace(' ', '-')}`}
+                    data-testid={`mobile-nav-link-${link.label.toLowerCase().replace(" ", "-")}`}
                   >
                     {link.label}
                   </Link>
@@ -102,7 +109,7 @@ const Navigation = () => {
                 <Link
                   to="/admin/login"
                   onClick={() => setIsOpen(false)}
-                  className="text-fdm-text-secondary text-sm uppercase tracking-widest mt-4 pt-4 border-t border-fdm-border"
+                  className="text-fdm-text-secondary font-display text-xs uppercase tracking-[0.3em] mt-4 pt-4 border-t border-fdm-border"
                 >
                   Admin
                 </Link>

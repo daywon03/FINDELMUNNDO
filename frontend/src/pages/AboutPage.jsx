@@ -5,7 +5,7 @@ import { API } from '../App';
 
 const AboutPage = () => {
   const [settings, setSettings] = useState({
-    site_title: 'Findelmundo',
+    site_title: 'FINDELMUNNDO',
     tagline: 'Audio • Vidéo • Photographie',
     about_bio: '',
   });
@@ -37,7 +37,7 @@ const AboutPage = () => {
   `;
 
   return (
-    <main className="min-h-screen md:ml-20 pt-8 pb-24 md:pb-8" data-testid="about-page">
+    <main className="min-h-screen md:pt-20 pt-8 pb-24 md:pb-8" data-testid="about-page">
       {/* Header */}
       <section className="px-8 md:px-16 py-16 md:py-24">
         <motion.div
@@ -45,7 +45,7 @@ const AboutPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-fdm-accent text-xs uppercase tracking-widest">À Propos</span>
+          <span className="text-fdm-accent font-display text-xs uppercase tracking-[0.3em] opacity-80">À Propos</span>
           <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tighter mt-4">
             L'ARTISTE<span className="text-fdm-accent">.</span>
           </h1>
@@ -65,7 +65,7 @@ const AboutPage = () => {
             <div className="aspect-[3/4] bg-fdm-surface overflow-hidden">
               <img
                 src="https://customer-assets.emergentagent.com/job_a37f3bd7-a8d8-48eb-9b1c-3cba3f5f1f82/artifacts/a20whzg6_background-image.jpg"
-                alt="Findelmundo"
+                alt="FINDELMUNNDO"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />
             </div>
@@ -88,9 +88,9 @@ const AboutPage = () => {
           >
             <div>
               <h2 className="font-display text-3xl font-bold tracking-tight mb-2">
-                {settings.site_title || 'Findelmundo'}
+                {settings.site_title || 'FINDELMUNNDO'}
               </h2>
-              <p className="text-fdm-accent text-sm uppercase tracking-widest">
+              <p className="text-fdm-accent font-display text-xs uppercase tracking-[0.3em] opacity-80">
                 {settings.tagline || 'Audio • Vidéo • Photographie'}
               </p>
             </div>
@@ -172,7 +172,7 @@ const AboutPage = () => {
           <blockquote className="font-display text-2xl md:text-4xl font-bold tracking-tight leading-tight">
             "L'art ne reproduit pas le visible, il rend visible."
           </blockquote>
-          <cite className="block mt-6 text-fdm-text-secondary text-sm uppercase tracking-widest">
+          <cite className="block mt-6 text-fdm-text-secondary font-display text-xs uppercase tracking-[0.3em] opacity-80">
             — Paul Klee
           </cite>
         </motion.div>
@@ -182,7 +182,7 @@ const AboutPage = () => {
       <footer className="py-12 px-8 md:px-16 border-t border-fdm-border">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="font-display text-xl font-bold tracking-tighter">
-            FINDELMUNDO<span className="text-fdm-accent">.</span>
+            FINDELMUNNDO<span className="text-fdm-accent">.</span>
           </div>
           <p className="text-fdm-text-secondary text-sm">
             © {new Date().getFullYear()} Tous droits réservés

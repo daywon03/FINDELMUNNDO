@@ -73,7 +73,7 @@ function App() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-fdm-bg flex items-center justify-center">
+      <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="loading-line w-32"></div>
       </div>
     );
@@ -81,10 +81,9 @@ function App() {
 
   return (
     <AuthContext.Provider value={{ admin, login, logout }}>
-      <div className="App bg-fdm-bg min-h-screen">
+      <div className="App bg-black min-h-screen">
         <BrowserRouter>
           <CustomCursor />
-          <GrainOverlay />
           <Routes>
             {/* Public Routes */}
             <Route path="/" element={<><Navigation /><HomePage /></>} />

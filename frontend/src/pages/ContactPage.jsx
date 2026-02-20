@@ -37,7 +37,7 @@ const ContactPage = () => {
   };
 
   return (
-    <main className="min-h-screen md:ml-20 pt-8 pb-24 md:pb-8" data-testid="contact-page">
+    <main className="min-h-screen md:pt-20 pt-8 pb-24 md:pb-8" data-testid="contact-page">
       {/* Header */}
       <section className="px-8 md:px-16 py-16 md:py-24">
         <motion.div
@@ -45,7 +45,7 @@ const ContactPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-fdm-accent text-xs uppercase tracking-widest">Contact</span>
+          <span className="text-fdm-accent font-display text-xs uppercase tracking-[0.3em] opacity-80">Contact</span>
           <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tighter mt-4">
             PARLONS<span className="text-fdm-accent">.</span>
           </h1>
@@ -63,7 +63,7 @@ const ContactPage = () => {
           >
             <form onSubmit={handleSubmit} className="space-y-6" data-testid="contact-form">
               <div>
-                <label className="block text-sm uppercase tracking-widest text-fdm-text-secondary mb-2">
+                <label className="block font-display text-xs uppercase tracking-[0.3em] opacity-80 text-fdm-text-secondary mb-2">
                   Nom
                 </label>
                 <Input
@@ -78,7 +78,7 @@ const ContactPage = () => {
               </div>
 
               <div>
-                <label className="block text-sm uppercase tracking-widest text-fdm-text-secondary mb-2">
+                <label className="block font-display text-xs uppercase tracking-[0.3em] opacity-80 text-fdm-text-secondary mb-2">
                   Email
                 </label>
                 <Input
@@ -94,7 +94,7 @@ const ContactPage = () => {
               </div>
 
               <div>
-                <label className="block text-sm uppercase tracking-widest text-fdm-text-secondary mb-2">
+                <label className="block font-display text-xs uppercase tracking-[0.3em] opacity-80 text-fdm-text-secondary mb-2">
                   Sujet
                 </label>
                 <Input
@@ -109,7 +109,7 @@ const ContactPage = () => {
               </div>
 
               <div>
-                <label className="block text-sm uppercase tracking-widest text-fdm-text-secondary mb-2">
+                <label className="block font-display text-xs uppercase tracking-[0.3em] opacity-80 text-fdm-text-secondary mb-2">
                   Message
                 </label>
                 <Textarea
@@ -166,9 +166,9 @@ const ContactPage = () => {
                   <Mail size={20} className="text-fdm-accent" />
                 </div>
                 <div>
-                  <span className="block text-xs uppercase tracking-widest text-fdm-text-secondary">Email</span>
-                  <a href="mailto:contact@findelmundo.com" className="text-fdm-text hover:text-fdm-accent transition-colors">
-                    contact@findelmundo.com
+                  <span className="block font-display text-xs uppercase tracking-[0.3em] opacity-80 text-fdm-text-secondary">Email</span>
+                  <a href="mailto:contact@FINDELMUNNDO.com" className="text-fdm-text hover:text-fdm-accent transition-colors">
+                    contact@FINDELMUNNDO.com
                   </a>
                 </div>
               </div>
@@ -178,9 +178,9 @@ const ContactPage = () => {
                   <Instagram size={20} className="text-fdm-accent" />
                 </div>
                 <div>
-                  <span className="block text-xs uppercase tracking-widest text-fdm-text-secondary">Instagram</span>
-                  <a href="https://instagram.com/findelmundo" target="_blank" rel="noopener noreferrer" className="text-fdm-text hover:text-fdm-accent transition-colors">
-                    @findelmundo
+                  <span className="block font-display text-xs uppercase tracking-[0.3em] opacity-80 text-fdm-text-secondary">Instagram</span>
+                  <a href="https://instagram.com/FINDELMUNNDO" target="_blank" rel="noopener noreferrer" className="text-fdm-text hover:text-fdm-accent transition-colors">
+                    @FINDELMUNNDO
                   </a>
                 </div>
               </div>
@@ -190,9 +190,9 @@ const ContactPage = () => {
                   <Twitter size={20} className="text-fdm-accent" />
                 </div>
                 <div>
-                  <span className="block text-xs uppercase tracking-widest text-fdm-text-secondary">Twitter</span>
-                  <a href="https://twitter.com/findelmundo" target="_blank" rel="noopener noreferrer" className="text-fdm-text hover:text-fdm-accent transition-colors">
-                    @findelmundo
+                  <span className="block font-display text-xs uppercase tracking-[0.3em] opacity-80 text-fdm-text-secondary">Twitter</span>
+                  <a href="https://twitter.com/FINDELMUNNDO" target="_blank" rel="noopener noreferrer" className="text-fdm-text hover:text-fdm-accent transition-colors">
+                    @FINDELMUNNDO
                   </a>
                 </div>
               </div>
@@ -202,7 +202,7 @@ const ContactPage = () => {
             <div className="p-6 border border-fdm-border">
               <div className="flex items-center gap-3 mb-4">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                <span className="text-sm uppercase tracking-widest">Disponible pour projets</span>
+                <span className="font-display text-xs uppercase tracking-[0.3em] opacity-80">Disponible pour projets</span>
               </div>
               <p className="text-fdm-text-secondary text-sm">
                 Actuellement ouvert aux collaborations et projets créatifs. 
@@ -246,7 +246,7 @@ const ContactPage = () => {
       <footer className="py-12 px-8 md:px-16 border-t border-fdm-border">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="font-display text-xl font-bold tracking-tighter">
-            FINDELMUNDO<span className="text-fdm-accent">.</span>
+            FINDELMUNNDO<span className="text-fdm-accent">.</span>
           </div>
           <p className="text-fdm-text-secondary text-sm">
             © {new Date().getFullYear()} Tous droits réservés

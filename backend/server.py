@@ -103,7 +103,7 @@ class ContactMessage(BaseModel):
     message: str
 
 class SiteSettings(BaseModel):
-    site_title: str = "Findelmundo"
+    site_title: str = "FINDELMUNNDO"
     tagline: str = "Audio • Video • Photography"
     about_bio: str = ""
     contact_email: str = ""
@@ -370,7 +370,7 @@ async def get_contact_messages(authorization: str = Header(None)):
 
 @api_router.get("/")
 async def root():
-    return {"message": "Findelmundo API", "version": "1.0"}
+    return {"message": "FINDELMUNNDO API", "version": "1.0"}
 
 # Include the router in the main app
 app.include_router(api_router)

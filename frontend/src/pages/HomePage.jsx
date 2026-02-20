@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import MinimalArrowButton from '../components/MinimalArrowButton';
 
 const HomePage = () => {
   const [showIntro, setShowIntro] = useState(true);
@@ -30,19 +31,31 @@ const HomePage = () => {
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
-            className="intro-screen"
+            className="intro-screen relative"
             data-testid="intro-screen"
           >
-            <div className="text-center">
+            {/* Background Video */}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src="/intro-video.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-black/50 z-0" /> {/* Dark overlay over video */}
+
+            <div className="text-center relative z-10">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.8 }}
               >
                 <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-4">
-                  FINDELMUNDO<span className="text-fdm-accent">.</span>
+                  FINDELMUNNDO<span className="text-fdm-accent">.</span>
                 </h1>
-                <p className="font-body text-fdm-text-secondary text-sm md:text-base tracking-widest uppercase mb-12">
+                <p className="font-display text-fdm-text-secondary text-xs uppercase tracking-[0.3em] opacity-80 mb-12">
                   Audio • Vidéo • Photographie
                 </p>
               </motion.div>
@@ -76,7 +89,7 @@ const HomePage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="min-h-screen md:ml-20"
+            className="min-h-screen md:pt-20"
             data-testid="home-main-content"
           >
             {/* Hero Section */}
@@ -103,17 +116,6 @@ const HomePage = () => {
                   Direction artistique visuelle centrée sur l'humain, la texture et l'intensité émotionnelle. 
                   Des atmosphères brutes, contrastées et incarnées.
                 </motion.p>
-
-                <motion.a
-                  href="/portfolio"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.8, duration: 0.5 }}
-                  className="btn-brutalist inline-block"
-                  data-testid="hero-portfolio-link"
-                >
-                  Découvrir le portfolio
-                </motion.a>
               </div>
 
               {/* Scroll Indicator */}
@@ -137,6 +139,35 @@ const HomePage = () => {
               </div>
             </section>
 
+            {/* Portfolio Section (Interactive Cartier-style Chapter) */}
+            <section className="relative h-screen flex items-end justify-start pb-24 md:pb-32 px-8 md:px-24 portfolio-bg">
+              <div className="absolute inset-0 overlay-dark-bottom" />
+              
+              <div className="relative z-10 w-full flex flex-col items-start gap-12">
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 1 }}
+                >
+                  <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-4">
+                    PERSONNALIZED<br />
+                    <span className="text-fdm-text">CREATIONS</span>
+                  </h2>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 1, delay: 0.3 }}
+                  className="mt-8 ml-8"
+                >
+                  <MinimalArrowButton to="/portfolio" text="PORTFOLIO" />
+                </motion.div>
+              </div>
+            </section>
+
             {/* Featured Section */}
             <section className="py-24 md:py-40 px-8 md:px-16">
               <div className="max-w-6xl mx-auto">
@@ -147,7 +178,7 @@ const HomePage = () => {
                   transition={{ duration: 0.6 }}
                   className="mb-16"
                 >
-                  <span className="text-fdm-accent text-xs uppercase tracking-widest">Direction Artistique</span>
+                  <span className="text-fdm-accent font-display text-xs uppercase tracking-[0.3em] opacity-80">Direction Artistique</span>
                   <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tighter mt-4">
                     UNE VISION<br />SINGULIÈRE
                   </h2>
@@ -226,7 +257,7 @@ const HomePage = () => {
             <footer className="py-12 px-8 md:px-16 border-t border-fdm-border">
               <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
                 <div className="font-display text-xl font-bold tracking-tighter">
-                  FINDELMUNDO<span className="text-fdm-accent">.</span>
+                  FINDELMUNNDO<span className="text-fdm-accent">.</span>
                 </div>
                 <p className="text-fdm-text-secondary text-sm">
                   © {new Date().getFullYear()} Tous droits réservés

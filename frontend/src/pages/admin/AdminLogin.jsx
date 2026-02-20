@@ -36,7 +36,7 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="min-h-screen bg-fdm-bg flex items-center justify-center p-8" data-testid="admin-login-page">
+    <div className="min-h-screen bg-black flex items-center justify-center p-8" data-testid="admin-login-page">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -45,9 +45,9 @@ const AdminLogin = () => {
         {/* Logo */}
         <div className="text-center mb-12">
           <h1 className="font-display text-4xl font-bold tracking-tighter">
-            FINDELMUNDO<span className="text-fdm-accent">.</span>
+            FINDELMUNNDO<span className="text-fdm-accent">.</span>
           </h1>
-          <p className="text-fdm-text-secondary text-sm mt-2 uppercase tracking-widest">
+          <p className="text-fdm-text-secondary font-display text-xs mt-2 uppercase tracking-[0.3em] opacity-80">
             Espace Administration
           </p>
         </div>
@@ -55,7 +55,7 @@ const AdminLogin = () => {
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-6" data-testid="admin-login-form">
           <div>
-            <label className="block text-sm uppercase tracking-widest text-fdm-text-secondary mb-2">
+            <label className="block font-display text-xs uppercase tracking-[0.3em] opacity-80 text-fdm-text-secondary mb-2">
               Email
             </label>
             <Input
@@ -64,13 +64,13 @@ const AdminLogin = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
               className="form-input bg-fdm-surface border-fdm-border text-fdm-text focus:border-fdm-accent rounded-none w-full"
-              placeholder="admin@findelmundo.com"
+              placeholder="admin@FINDELMUNNDO.com"
               data-testid="admin-email-input"
             />
           </div>
 
           <div>
-            <label className="block text-sm uppercase tracking-widest text-fdm-text-secondary mb-2">
+            <label className="block font-display text-xs uppercase tracking-[0.3em] opacity-80 text-fdm-text-secondary mb-2">
               Mot de passe
             </label>
             <div className="relative">
@@ -118,7 +118,7 @@ const AdminLogin = () => {
         <div className="mt-12 text-center">
           <a
             href="/"
-            className="text-fdm-text-secondary hover:text-fdm-text transition-colors text-xs uppercase tracking-widest"
+            className="text-fdm-text-secondary hover:text-fdm-text transition-colors font-display text-xs uppercase tracking-[0.3em] opacity-80"
           >
             ← Retour au site
           </a>

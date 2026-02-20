@@ -1,5 +1,5 @@
 {
-  "project_name": "Findelmundo Immersive Portfolio",
+  "project_name": "FINDELMUNNDO Immersive Portfolio",
   "design_philosophy": {
     "theme": "The Darkroom Brutalist",
     "core_concept": "Developing film in a concrete bunker. Raw, abrasive, high-contrast, Japanese-influenced minimalism.",
@@ -52,7 +52,7 @@
     "rules": [
       "Background is always #0a0a0a, never pure black #000000.",
       "Text is off-white #f0f0f0 to reduce eye strain.",
-      "Red is ONLY for: Hover states, Active links, The 'Findelmundo' dot."
+      "Red is ONLY for: Hover states, Active links, The 'FINDELMUNNDO' dot."
     ]
   },
   "layout": {

@@ -11,7 +11,7 @@ class FindelmundoAPITester:
         self.base_url = base_url
         self.api_url = f"{base_url}/api"
         self.token = None
-        self.admin_email = f"test_admin_{datetime.now().strftime('%H%M%S')}@findelmundo.com"
+        self.admin_email = f"test_admin_{datetime.now().strftime('%H%M%S')}@FINDELMUNNDO.com"
         self.test_password = "TestPass123!"
         self.tests_run = 0
         self.tests_passed = 0
@@ -173,10 +173,10 @@ class FindelmundoAPITester:
 
         try:
             settings_data = {
-                "site_title": "Findelmundo Test",
+                "site_title": "FINDELMUNNDO Test",
                 "tagline": "Audio • Video • Photography",
                 "about_bio": "Test bio content",
-                "contact_email": "test@findelmundo.com"
+                "contact_email": "test@FINDELMUNNDO.com"
             }
             
             response = requests.put(
@@ -314,7 +314,7 @@ class FindelmundoAPITester:
 
     def run_all_tests(self):
         """Run all API tests in sequence"""
-        print(f"🚀 Starting Findelmundo API Tests")
+        print(f"🚀 Starting FINDELMUNNDO API Tests")
         print(f"🔗 Base URL: {self.base_url}")
         print(f"📧 Test admin email: {self.admin_email}")
         print("=" * 60)

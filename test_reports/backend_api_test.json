@@ -8,7 +8,7 @@
     {
       "test": "Root API Endpoint",
       "status": "PASSED",
-      "details": "Status: 200, Message: Findelmundo API",
+      "details": "Status: 200, Message: FINDELMUNNDO API",
       "timestamp": "2026-02-20T16:26:15.237443"
     },
     {
@@ -26,7 +26,7 @@
     {
       "test": "Get Admin Info",
       "status": "PASSED",
-      "details": "Status: 200, Email: test_admin_162614@findelmundo.com",
+      "details": "Status: 200, Email: test_admin_162614@FINDELMUNNDO.com",
       "timestamp": "2026-02-20T16:26:16.435418"
     },
     {
@@ -44,7 +44,7 @@
     {
       "test": "Get Site Settings",
       "status": "PASSED",
-      "details": "Status: 200, Site title: Findelmundo",
+      "details": "Status: 200, Site title: Findelmunndo",
       "timestamp": "2026-02-20T16:26:16.967140"
     },
     {

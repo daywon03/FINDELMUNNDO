@@ -60,7 +60,7 @@ const AdminDashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-fdm-bg flex" data-testid="admin-dashboard">
+    <div className="min-h-screen bg-black flex" data-testid="admin-dashboard">
       {/* Sidebar */}
       <aside className="admin-sidebar w-64 fixed left-0 top-0 h-full flex flex-col">
         <div className="p-6 border-b border-fdm-border">
@@ -352,7 +352,7 @@ const MediaManager = () => {
                   value={uploadData.title}
                   onChange={(e) => setUploadData({ ...uploadData, title: e.target.value })}
                   required
-                  className="bg-fdm-bg border-fdm-border rounded-none"
+                  className="bg-black border-fdm-border rounded-none"
                   data-testid="upload-title-input"
                 />
               </div>
@@ -362,7 +362,7 @@ const MediaManager = () => {
                 <Textarea
                   value={uploadData.description}
                   onChange={(e) => setUploadData({ ...uploadData, description: e.target.value })}
-                  className="bg-fdm-bg border-fdm-border rounded-none"
+                  className="bg-black border-fdm-border rounded-none"
                   rows={3}
                   data-testid="upload-description-input"
                 />
@@ -375,7 +375,7 @@ const MediaManager = () => {
                     value={uploadData.category}
                     onValueChange={(value) => setUploadData({ ...uploadData, category: value })}
                   >
-                    <SelectTrigger className="bg-fdm-bg border-fdm-border rounded-none" data-testid="upload-category-select">
+                    <SelectTrigger className="bg-black border-fdm-border rounded-none" data-testid="upload-category-select">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent className="bg-fdm-surface border-fdm-border">
@@ -392,7 +392,7 @@ const MediaManager = () => {
                     value={uploadData.media_type}
                     onValueChange={(value) => setUploadData({ ...uploadData, media_type: value })}
                   >
-                    <SelectTrigger className="bg-fdm-bg border-fdm-border rounded-none" data-testid="upload-type-select">
+                    <SelectTrigger className="bg-black border-fdm-border rounded-none" data-testid="upload-type-select">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent className="bg-fdm-surface border-fdm-border">
@@ -458,7 +458,7 @@ const MediaManager = () => {
               </div>
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-fdm-bg/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+              <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
                 <button
                   onClick={() => toggleFeatured(item)}
                   className={`p-2 border ${item.featured ? 'border-fdm-accent text-fdm-accent' : 'border-fdm-border text-fdm-text-secondary'}`}
@@ -561,7 +561,7 @@ const MessagesManager = () => {
 // Settings Manager
 const SettingsManager = () => {
   const [settings, setSettings] = useState({
-    site_title: 'Findelmundo',
+    site_title: 'FINDELMUNNDO',
     tagline: 'Audio • Vidéo • Photographie',
     about_bio: '',
     contact_email: '',

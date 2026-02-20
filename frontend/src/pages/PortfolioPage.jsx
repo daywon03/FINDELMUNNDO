@@ -101,7 +101,7 @@ const PortfolioPage = () => {
     : [...new Set(media.map(m => m.category))].map(c => ({ name: c }));
 
   return (
-    <main className="min-h-screen md:ml-20 pt-8 pb-24 md:pb-8" data-testid="portfolio-page">
+    <main className="min-h-screen md:pt-20 pt-8 pb-24 md:pb-8" data-testid="portfolio-page">
       {/* Header */}
       <section className="px-8 md:px-16 py-16 md:py-24">
         <motion.div
@@ -109,7 +109,7 @@ const PortfolioPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-fdm-accent text-xs uppercase tracking-widest">Portfolio</span>
+          <span className="text-fdm-accent font-display text-xs uppercase tracking-[0.3em] opacity-80">Portfolio</span>
           <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tighter mt-4 mb-8">
             TRAVAUX<span className="text-fdm-accent">.</span>
           </h1>
@@ -204,7 +204,7 @@ const PortfolioPage = () => {
                   </div>
                   
                   <div className="grid-item-info">
-                    <span className="text-fdm-accent text-xs uppercase tracking-widest">{item.category}</span>
+                    <span className="text-fdm-accent font-display text-xs uppercase tracking-[0.3em] opacity-80">{item.category}</span>
                     <h3 className="font-display text-xl mt-2">{item.title}</h3>
                   </div>
                 </motion.div>
@@ -256,7 +256,7 @@ const PortfolioPage = () => {
               )}
 
               <div className="mt-6 text-center">
-                <span className="text-fdm-accent text-xs uppercase tracking-widest">{selectedMedia.category}</span>
+                <span className="text-fdm-accent font-display text-xs uppercase tracking-[0.3em] opacity-80">{selectedMedia.category}</span>
                 <h3 className="font-display text-2xl mt-2">{selectedMedia.title}</h3>
                 {selectedMedia.description && (
                   <p className="text-fdm-text-secondary mt-2">{selectedMedia.description}</p>
@@ -271,7 +271,7 @@ const PortfolioPage = () => {
       <footer className="mt-24 py-12 px-8 md:px-16 border-t border-fdm-border">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="font-display text-xl font-bold tracking-tighter">
-            FINDELMUNDO<span className="text-fdm-accent">.</span>
+            FINDELMUNNDO<span className="text-fdm-accent">.</span>
           </div>
           <p className="text-fdm-text-secondary text-sm">
             © {new Date().getFullYear()} Tous droits réservés
