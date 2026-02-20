@@ -1,75 +1,81 @@
 {
-  "test_run_timestamp": "2026-02-20T16:25:08.660706",
+  "test_run_timestamp": "2026-02-20T16:26:17.937780",
   "base_url": "https://jewel-experience.preview.emergentagent.com",
-  "total_tests": 11,
-  "passed_tests": 7,
-  "success_rate": "63.6%",
+  "total_tests": 12,
+  "passed_tests": 12,
+  "success_rate": "100.0%",
   "test_details": [
     {
       "test": "Root API Endpoint",
       "status": "PASSED",
       "details": "Status: 200, Message: Findelmundo API",
-      "timestamp": "2026-02-20T16:25:05.540742"
+      "timestamp": "2026-02-20T16:26:15.237443"
     },
     {
       "test": "Admin Registration",
       "status": "PASSED",
-      "details": "Token received, Admin ID: f8b59c7e-adc5-4c5c-aba7-732175e5603e",
-      "timestamp": "2026-02-20T16:25:06.601004"
+      "details": "Token received, Admin ID: 7bb31bd6-5952-4df1-93dc-fe54d579b1b0",
+      "timestamp": "2026-02-20T16:26:15.792250"
     },
     {
       "test": "Admin Login",
       "status": "PASSED",
       "details": "Login successful, Token refreshed",
-      "timestamp": "2026-02-20T16:25:07.079395"
+      "timestamp": "2026-02-20T16:26:16.263382"
     },
     {
       "test": "Get Admin Info",
-      "status": "FAILED",
-      "details": "Status: 401",
-      "timestamp": "2026-02-20T16:25:07.287624"
+      "status": "PASSED",
+      "details": "Status: 200, Email: test_admin_162614@findelmundo.com",
+      "timestamp": "2026-02-20T16:26:16.435418"
     },
     {
       "test": "Get All Media",
       "status": "PASSED",
       "details": "Status: 200, Media count: 0",
-      "timestamp": "2026-02-20T16:25:07.502133"
+      "timestamp": "2026-02-20T16:26:16.637956"
     },
     {
       "test": "Get Categories",
       "status": "PASSED",
       "details": "Status: 200, Categories count: 0",
-      "timestamp": "2026-02-20T16:25:07.728867"
+      "timestamp": "2026-02-20T16:26:16.818329"
     },
     {
       "test": "Get Site Settings",
       "status": "PASSED",
       "details": "Status: 200, Site title: Findelmundo",
-      "timestamp": "2026-02-20T16:25:07.936713"
+      "timestamp": "2026-02-20T16:26:16.967140"
     },
     {
       "test": "Send Contact Message",
       "status": "PASSED",
       "details": "Status: 200, Message: Message sent successfully",
-      "timestamp": "2026-02-20T16:25:08.167836"
+      "timestamp": "2026-02-20T16:26:17.101104"
     },
     {
       "test": "Get Contact Messages",
-      "status": "FAILED",
-      "details": "Status: 401",
-      "timestamp": "2026-02-20T16:25:08.314444"
+      "status": "PASSED",
+      "details": "Status: 200, Messages count: 2",
+      "timestamp": "2026-02-20T16:26:17.243730"
     },
     {
       "test": "Update Site Settings",
-      "status": "FAILED",
-      "details": "Status: 401",
-      "timestamp": "2026-02-20T16:25:08.508605"
+      "status": "PASSED",
+      "details": "Status: 200",
+      "timestamp": "2026-02-20T16:26:17.465849"
     },
     {
       "test": "Media Upload",
-      "status": "FAILED",
-      "details": "Status: 401, Response: {\"detail\":\"Token required\"}",
-      "timestamp": "2026-02-20T16:25:08.658389"
+      "status": "PASSED",
+      "details": "Status: 200, Media ID: 367212e6-536e-4002-baae-fdc2013f6621",
+      "timestamp": "2026-02-20T16:26:17.749829"
+    },
+    {
+      "test": "Media Delete",
+      "status": "PASSED",
+      "details": "Status: 200, Message: Media deleted successfully",
+      "timestamp": "2026-02-20T16:26:17.936554"
     }
   ]
 }
