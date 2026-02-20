@@ -360,8 +360,7 @@ async def send_contact_message(data: ContactMessage):
     return {"message": "Message sent successfully"}
 
 @api_router.get("/contact/messages")
-async def get_contact_messages(authorization: str = None):
-    from fastapi import Header
+async def get_contact_messages(authorization: str = Header(None)):
     await get_current_admin(authorization)
     
     messages = await db.contact_messages.find({}, {"_id": 0}).sort("created_at", -1).to_list(100)
