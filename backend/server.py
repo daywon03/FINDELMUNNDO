@@ -291,8 +291,7 @@ async def update_media(media_id: str, data: MediaUpdate, authorization: str = He
     return MediaResponse(**media)
 
 @api_router.delete("/media/{media_id}")
-async def delete_media(media_id: str, authorization: str = None):
-    from fastapi import Header
+async def delete_media(media_id: str, authorization: str = Header(None)):
     await get_current_admin(authorization)
     
     media = await db.media.find_one({"id": media_id}, {"_id": 0})
