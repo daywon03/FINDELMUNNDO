@@ -1,0 +1,75 @@
+{
+  "test_run_timestamp": "2026-02-20T16:25:08.660706",
+  "base_url": "https://jewel-experience.preview.emergentagent.com",
+  "total_tests": 11,
+  "passed_tests": 7,
+  "success_rate": "63.6%",
+  "test_details": [
+    {
+      "test": "Root API Endpoint",
+      "status": "PASSED",
+      "details": "Status: 200, Message: Findelmundo API",
+      "timestamp": "2026-02-20T16:25:05.540742"
+    },
+    {
+      "test": "Admin Registration",
+      "status": "PASSED",
+      "details": "Token received, Admin ID: f8b59c7e-adc5-4c5c-aba7-732175e5603e",
+      "timestamp": "2026-02-20T16:25:06.601004"
+    },
+    {
+      "test": "Admin Login",
+      "status": "PASSED",
+      "details": "Login successful, Token refreshed",
+      "timestamp": "2026-02-20T16:25:07.079395"
+    },
+    {
+      "test": "Get Admin Info",
+      "status": "FAILED",
+      "details": "Status: 401",
+      "timestamp": "2026-02-20T16:25:07.287624"
+    },
+    {
+      "test": "Get All Media",
+      "status": "PASSED",
+      "details": "Status: 200, Media count: 0",
+      "timestamp": "2026-02-20T16:25:07.502133"
+    },
+    {
+      "test": "Get Categories",
+      "status": "PASSED",
+      "details": "Status: 200, Categories count: 0",
+      "timestamp": "2026-02-20T16:25:07.728867"
+    },
+    {
+      "test": "Get Site Settings",
+      "status": "PASSED",
+      "details": "Status: 200, Site title: Findelmundo",
+      "timestamp": "2026-02-20T16:25:07.936713"
+    },
+    {
+      "test": "Send Contact Message",
+      "status": "PASSED",
+      "details": "Status: 200, Message: Message sent successfully",
+      "timestamp": "2026-02-20T16:25:08.167836"
+    },
+    {
+      "test": "Get Contact Messages",
+      "status": "FAILED",
+      "details": "Status: 401",
+      "timestamp": "2026-02-20T16:25:08.314444"
+    },
+    {
+      "test": "Update Site Settings",
+      "status": "FAILED",
+      "details": "Status: 401",
+      "timestamp": "2026-02-20T16:25:08.508605"
+    },
+    {
+      "test": "Media Upload",
+      "status": "FAILED",
+      "details": "Status: 401, Response: {\"detail\":\"Token required\"}",
+      "timestamp": "2026-02-20T16:25:08.658389"
+    }
+  ]
+}
