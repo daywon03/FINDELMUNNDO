@@ -330,8 +330,7 @@ async def get_settings():
     return SiteSettings(**settings)
 
 @api_router.put("/settings", response_model=SiteSettings)
-async def update_settings(data: SiteSettings, authorization: str = None):
-    from fastapi import Header
+async def update_settings(data: SiteSettings, authorization: str = Header(None)):
     await get_current_admin(authorization)
     
     settings_doc = data.model_dump()
