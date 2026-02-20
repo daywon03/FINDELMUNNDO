@@ -210,9 +210,8 @@ async def upload_media(
     description: str = Form(""),
     category: str = Form("Portrait"),
     media_type: str = Form("image"),
-    authorization: str = None
+    authorization: str = Header(None)
 ):
-    from fastapi import Header
     await get_current_admin(authorization)
     
     # Generate unique filename
