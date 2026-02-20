@@ -276,8 +276,7 @@ async def get_media(media_id: str):
     return MediaResponse(**media)
 
 @api_router.put("/media/{media_id}", response_model=MediaResponse)
-async def update_media(media_id: str, data: MediaUpdate, authorization: str = None):
-    from fastapi import Header
+async def update_media(media_id: str, data: MediaUpdate, authorization: str = Header(None)):
     await get_current_admin(authorization)
     
     update_data = {k: v for k, v in data.model_dump().items() if v is not None}
