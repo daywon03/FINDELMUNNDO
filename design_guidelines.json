@@ -1,0 +1,156 @@
+{
+  "project_name": "Findelmundo Immersive Portfolio",
+  "design_philosophy": {
+    "theme": "The Darkroom Brutalist",
+    "core_concept": "Developing film in a concrete bunker. Raw, abrasive, high-contrast, Japanese-influenced minimalism.",
+    "emotional_tone": "Mysterious, Intense, Artistic, Raw, Silent",
+    "key_principles": [
+      "No Perfect Grids: Embrace overlap and asymmetry.",
+      "Grain is Good: Texture over flatness.",
+      "Red is Danger: Use the accent color only for critical interactions.",
+      "Motion is Liquid: Smooth scrolling and slow reveals."
+    ]
+  },
+  "typography": {
+    "primary_font": {
+      "name": "Syne",
+      "usage": "Headings, Large Display Text",
+      "weights": ["700", "800"],
+      "fallback": "sans-serif"
+    },
+    "secondary_font": {
+      "name": "Space Grotesk",
+      "usage": "Body Text, UI Elements, Navigation",
+      "weights": ["300", "400", "500"],
+      "fallback": "monospace"
+    },
+    "accent_font": {
+      "name": "Noto Sans JP",
+      "usage": "Vertical Japanese text decorations",
+      "weights": ["400"],
+      "fallback": "sans-serif"
+    },
+    "rules": [
+      "Headings: Uppercase, tight tracking (-0.05em), massive sizing (text-6xl to text-9xl).",
+      "Body: Clean, legible, generous line-height (leading-relaxed).",
+      "Vertical Text: Use 'writing-mode: vertical-rl' for section markers."
+    ]
+  },
+  "colors": {
+    "palette": {
+      "background": "#0a0a0a",
+      "surface": "#121212",
+      "text_primary": "#f0f0f0",
+      "text_secondary": "#888888",
+      "accent": "#ff3333",
+      "border": "#333333"
+    },
+    "gradients": {
+      "grain_overlay": "url('data:image/svg+xml,...') (See Implementation)",
+      "red_glow": "radial-gradient(circle, rgba(255,51,51,0.2) 0%, rgba(10,10,10,0) 70%)"
+    },
+    "rules": [
+      "Background is always #0a0a0a, never pure black #000000.",
+      "Text is off-white #f0f0f0 to reduce eye strain.",
+      "Red is ONLY for: Hover states, Active links, The 'Findelmundo' dot."
+    ]
+  },
+  "layout": {
+    "grid_system": "The Scatter Grid",
+    "spacing": {
+      "container_padding": "p-8 md:p-16",
+      "section_gap": "gap-24 md:gap-40"
+    },
+    "strategies": [
+      "Masonry Layout for Portfolio: Columns shift vertically to break lines.",
+      "Overlapping Elements: Text overlays images slightly (negative margin).",
+      "Sticky Navigation: Vertical sidebar on desktop, floating bottom bar on mobile."
+    ]
+  },
+  "components": {
+    "Button": {
+      "style": "Brutalist",
+      "visuals": "Sharp edges (rounded-none), uppercase text, 1px solid border. Hover: Fill with white, text turns black.",
+      "component_path": "/app/frontend/src/components/ui/button.js"
+    },
+    "Card": {
+      "style": "Invisible Frame",
+      "visuals": "No background, no shadow. Just the image/video and raw text below it.",
+      "component_path": "/app/frontend/src/components/ui/card.js"
+    },
+    "Navigation": {
+      "style": "Floating Minimal",
+      "visuals": "Mix of vertical and horizontal text. Blur backdrop (backdrop-blur-md).",
+      "instructions": "Desktop: Fixed Left Vertical. Mobile: Fixed Bottom Horizontal."
+    },
+    "Cursor": {
+      "style": "Custom",
+      "visuals": "A small white dot that expands into a ring with 'VIEW' text when hovering media.",
+      "instructions": "Use a custom hook to track mouse position."
+    }
+  },
+  "motion": {
+    "library": "framer-motion + lenis",
+    "defaults": {
+      "duration": 0.8,
+      "ease": [0.16, 1, 0.3, 1]
+    },
+    "specifics": {
+      "page_transition": "Fade out black overlay.",
+      "scroll": "Lenis for momentum scrolling (MANDATORY).",
+      "images": "Parallax effect (y-axis movement) on scroll. Scale up slightly on hover."
+    }
+  },
+  "assets": {
+    "images": {
+      "background_hero": "https://customer-assets.emergentagent.com/job_a37f3bd7-a8d8-48eb-9b1c-3cba3f5f1f82/artifacts/a20whzg6_background-image.jpg",
+      "textures": [
+        "https://images.unsplash.com/photo-1758045747219-b38d04de019b?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "https://images.unsplash.com/photo-1694721065597-639c65e80c6b?crop=entropy&cs=srgb&fm=jpg&q=85"
+      ],
+      "portfolio_placeholders": [
+        {
+          "url": "https://images.unsplash.com/photo-1770896687186-895de50a4123?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "category": "Portrait",
+          "alt": "Man in red shadow"
+        },
+        {
+          "url": "https://images.pexels.com/photos/32937015/pexels-photo-32937015.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "category": "Experimental",
+          "alt": "Glitch portrait"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1630041353236-d1e5a3c23116?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "category": "Architecture",
+          "alt": "Concrete brutalist"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1646421017564-346737c5c884?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "category": "Architecture",
+          "alt": "Tall dark building"
+        },
+        {
+            "url": "https://images.pexels.com/photos/28931572/pexels-photo-28931572.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "category": "Abstract",
+            "alt": "Red light leak"
+        }
+      ]
+    }
+  },
+  "implementation_steps": [
+    "1. Setup 'Syne' and 'Space Grotesk' in index.css (import from Google Fonts).",
+    "2. Configure tailwind.config.js with the colors and font families.",
+    "3. Install 'lenis' and wrap the App in it.",
+    "4. Create the 'GrainOverlay' component (fixed, pointer-events-none, z-50).",
+    "5. Build the 'EnterExperience' intro screen for the Homepage.",
+    "6. Build the 'MasonryGrid' for the portfolio page.",
+    "7. Implement the Admin Dashboard (simple, table-based, using Shadcn)."
+  ],
+  "universal_guidelines": [
+    "Do NOT use standard Shadcn cards. Strip them down to raw divs.",
+    "Ensure the 'Red' accent is used ONLY for interaction feedback, not decoration.",
+    "Use 'data-testid' for all interactive elements.",
+    "Images MUST have 'loading=\"lazy\"' except for the Hero.",
+    "Videos should autoplay muted loop in the grid."
+  ]
+}
